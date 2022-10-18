@@ -19,3 +19,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::post('/webhook',[\App\Http\Controllers\api\WebhookController::class, 'webhook']);
+
+Route::get('/liff',function (){return view('login');});
+
+Route::apiResource('orders',\App\Http\Controllers\Api\OrderController::class);
+
